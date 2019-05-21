@@ -1,11 +1,11 @@
 //JavaScript Document
 
 $(document).ready(function (e){
-	document.addEventListener("deviceready", onDeviceready, false);
+	document.addEventListener("deviceready", onDeviceReady, false);
 	
 });
 
-function onDeviceready(){
+function onDeviceReady(){
 	
 	$('#posicion').on ('click', function(){
 	getPosition ();
@@ -22,7 +22,7 @@ function getPosition(){
 	
 	function onSuccess(position) {
 		
-		alert('latitude:' + position.coords.latitude +'\n'+
+		alert('Latitude:' + position.coords.latitude +'\n'+
 		'Longitude;' +  position.coords.longitude +'\n');
 	};
 	
