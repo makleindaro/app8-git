@@ -11,7 +11,7 @@
 <div id="mapholder"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFd0aiE5FttY8XRAFI9ecTSpgo2vP-qMk"></script>
 
-<button onClick="cargarmap()">Cargar mapa</button>
+<button onclick="cargarmap()">Cargar mapa</button>
 <script type="text/javascript">
 var x=document.getElementById("demo");
 function cargarmap(){
@@ -19,15 +19,15 @@ navigator.geolocation.getCurrentPosition (showPosition,showError);
 function showPosition(position)
 {
 lat=position.coords.latitude;
-lon =position.coords.longitude;
-latlon =new google.maps.LatLng(lat,lon)
-mapholder =document.getElementById("mapholder")
-mapholder.style.heigth ='500px';
+lon=position.coords.longitude;
+latlon=new google.maps.LatLng(lat,lon)
+mapholder=document.getElementById("mapholder")
+mapholder.style.height ='500px';
 mapholder.style.width ='750px';
 var myOptions={
 	center:latlon,zoom :17,
 	mapTypeId:google.maps.MapTypeId.ROADMAP,
-	mapTypeControl :false,
+	mapTypeControl:false,
 	navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
 };
 var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
@@ -48,7 +48,7 @@ x.innerHTML="El tiempo de peticion ha expirado."
 break;
 case error.UNKNOWN_ERROR:
 x.innerHTML="Ha ocurrido un error desconocido."
-break;
+break;     
 }
 }}
 </script>

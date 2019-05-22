@@ -1,24 +1,24 @@
 // JavaScript Document
 
-$(document).ready(function(e) {
-document.addEventListener("deviceready", onDeviceReady, false);
+$(document).ready(function (e) {
+document.addEventListener ("deviceready",onDeviceReady,false);
 
 });
 
 		function onDeviceReady() {
 		
-		$('#posicion').on ('click', function (){
-			getPosition();
+		$('#posicion').on('click',function (){
+			getPosition ();
 			});
 		}
 		
 		function getPosition() {
-		   var options = {
-			  enableHighAccuracy: true,
+		   var options={
+			  enableHighAccuracy :true,
 			  maximumAge: 3600000
 		   }
 			
-		   var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+		   var watchID=navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
 		
 		function onSuccess(position) {
 		
